@@ -19,7 +19,7 @@ export default function Home() {
   );
 }
 
-export function Dock() {
+function Dock() {
   return (
     <div className="fixed bottom-24 flex items-center justify-center">
       <MyDock />
