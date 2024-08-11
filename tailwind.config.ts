@@ -18,6 +18,11 @@ const config = {
       },
     },
     extend: {
+      fontFamily:{
+        WorkSans:["Work Sans","sans-serif"],
+        Poppins:["Poppins","sans-serif"],
+        Merienda:["Merienda","cursive"]
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
