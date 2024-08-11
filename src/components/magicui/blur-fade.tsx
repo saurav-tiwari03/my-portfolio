@@ -9,12 +9,12 @@ interface BlurFadeProps {
   variant?: {
     hidden: { y: number };
     visible: { y: number };
-  };  
+  };
   duration?: number;
   delay?: number;
   yOffset?: number;
   inView?: boolean;
-  inViewMargin?: MarginType | undefined ;
+  inViewMargin?: any ;
   blur?: string;
 }
 
