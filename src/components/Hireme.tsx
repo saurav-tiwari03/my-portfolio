@@ -2,15 +2,18 @@
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
 
-export function HoverBorderGradientDemo() {
+type Props = {
+  text:String
+}
+
+export function HoverBorderGradientDemo(props:Props) {
   return (
-    <div className=" flex justify-center text-center">
+    <div className="flex justify-start text-center">
       <HoverBorderGradient
         containerClassName="rounded-full"
-        as="button"
-        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+        className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2 "
       >
-        <span>Hire me</span>
+      {props.text}
       </HoverBorderGradient>
     </div>
   );
