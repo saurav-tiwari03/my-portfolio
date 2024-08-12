@@ -5,13 +5,14 @@ import { WordRotateDemo } from "@/components/RotateText";
 import { HoverBorderGradientDemo } from "@/components/Hireme";
 import BlurFade from "@/components/magicui/blur-fade";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import { OrbitingCirclesDemo } from "@/components/Technology";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { OrbitingCirclesDemo } from "@/components/Technology";
 
 export default function Home() {
 
@@ -29,10 +30,9 @@ export default function Home() {
             <RotateText />
 
             {/*Tech stack Used */}
-            <div className="my-12">
-              <OrbitingCirclesDemo/>
+            <div className="flex w-full justify-center my-12">
+              <OrbitingCirclesDemo />
             </div>
-
             
             {/*Education */}
             <div>
@@ -41,17 +41,17 @@ export default function Home() {
             </div>
 
             {/* About me */}
-            <div className="flex flex-col items-center justify-start">
-              <HoverBorderGradientDemo text={"About me"}/>
+            <div className="flex relative flex-col items-center justify-start">
+              <div className="flex justify-start items-start w-[450px]">
+                <HoverBorderGradientDemo text={"About me"}/>
+              </div>
               <About />
             </div>
 
           </div>
         </main>
       </BlurFade >
-      <div className="fixed inset-0 flex items-center justify-center">
-        <Dock />
-      </div>
+      <Dock />
     </div>
   );
 }
@@ -60,7 +60,7 @@ export default function Home() {
 
 function Dock() {
   return (
-    <div className= "fixed bottom-24 flex items-center justify-center">
+    <div className= "fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50"  id='navbar'>
       <MyDock />
     </div>
   );
@@ -77,7 +77,7 @@ function RotateText () {
 }
 
 function About () {
-  const words = `At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, I pursued a double degree in computer science and business, interned at big tech companies in Silicon Valley, and competed in over 21 hackathons for fun. I also had the pleasure of being a part of the first ever in-person cohort of buildspace called buildspace sf1.`
+  const words = `I am Full-Stack Developer. I use mainly Reactjs or Nextjs for frontend and Nodejs for Backend development`
   return (
     <TextGenerateEffect words={words} />
   )
@@ -89,23 +89,54 @@ function Education () {
       <div className="w-auto">
       <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="item-1">
-        <AccordionTrigger>Is it accessible?</AccordionTrigger>
+        <AccordionTrigger>
+          <div className="flex gap-2">
+            <Avatar>
+              <AvatarImage src="/galgotia.jpg" />
+              <AvatarFallback>GCET</AvatarFallback>
+            </Avatar> 
+            <p className="flex items-start flex-col ">
+              <span>Galgotia College of Eningeering and Technology</span>
+              <span>B.Tech IT (Year:2025)</span>
+            </p>
+          </div>
+        </AccordionTrigger>
         <AccordionContent>
-          Yes. It adheres to the WAI-ARIA design pattern.
+          I currently pursuing B.Tech in IT from Galgotia college of engineering and Technology
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-2">
-        <AccordionTrigger>Is it styled?</AccordionTrigger>
+        <AccordionTrigger>
+          <div className="flex gap-2">
+            <Avatar>
+              <AvatarImage src="/rmvm.jpg" />
+              <AvatarFallback>GCET</AvatarFallback>
+            </Avatar> 
+            <p className="flex items-start flex-col ">
+              <span>Raman Munjal Vidya Mandir</span>
+              <span>Intermediate (Year:2021)</span>
+            </p>
+          </div>
+        </AccordionTrigger>
         <AccordionContent>
-          Yes. It comes with default styles that matches the other
-          components&apos; aesthetic.
+          I have completed my Intermediate Schooling from Raman Munjal Vidya Mandir in field of Science (Non-Medical) 
         </AccordionContent>
       </AccordionItem>
       <AccordionItem value="item-3">
-        <AccordionTrigger>Is it animated?</AccordionTrigger>
+        <AccordionTrigger>
+          <div className="flex gap-2">
+            <Avatar>
+              <AvatarImage src="/rmvm.jpg" />
+              <AvatarFallback>GCET</AvatarFallback>
+            </Avatar> 
+            <p className="flex items-start flex-col ">
+              <span>Raman Munjal Vidya Mandir</span>
+              <span>High School (Year:2019)</span>
+            </p>
+          </div>
+        </AccordionTrigger>
         <AccordionContent>
-          Yes. It&apos;s animated by default, but you can disable it if you
-          prefer.
+        I have completed my Intermediate Schooling from Raman Munjal Vidya Mandir.
         </AccordionContent>
       </AccordionItem>
     </Accordion>

@@ -24,7 +24,7 @@ export const TextGenerateEffect = ({
         filter: filter ? "blur(0px)" : "none",
       },
       {
-        duration: duration ? duration : 1,
+        duration: duration ? duration : 2,
         delay: stagger(0.2),
       }
     );
@@ -37,7 +37,7 @@ export const TextGenerateEffect = ({
           return (
             <motion.span
               key={word + idx}
-              className="text-violet-500  opacity-0"
+              className="text-white  opacity-0"
               style={{
                 filter: filter ? "blur(10px)" : "none",
               }}
@@ -51,9 +51,9 @@ export const TextGenerateEffect = ({
   };
 
   return (
-    <div className={`${cn("font-bold", className)} flex items-center justify-center`}>
-      <div className="my-8 w-[60%] text-[#6d28d9]">
-        <div className="text-[#6d28d9] text-md md:text-md leading-snug tracking-wide text-start font-Poppins">
+    <div className={`${cn("font-semibold", className)} flex items-center justify-center`}>
+      <div className="my-8 w-[60%] text-[#fff]">
+        <div className="text-[#fff] text-sm md:text-sm leading-snug tracking-wide text-start font-Poppins">
           {renderWords()}
         </div>
       </div>

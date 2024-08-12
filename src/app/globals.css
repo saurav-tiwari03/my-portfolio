@@ -69,3 +69,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+#navbar {
+  background: transparent;
+  position: fixed;
+}
