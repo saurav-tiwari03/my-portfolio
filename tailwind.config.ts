@@ -21,7 +21,8 @@ const config = {
       fontFamily:{
         WorkSans:["Work Sans","sans-serif"],
         Poppins:["Poppins","sans-serif"],
-        Merienda:["Merienda","cursive"]
+        Merienda:["Merienda","cursive"],
+        Kanit:["Kanit","sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",

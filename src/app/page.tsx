@@ -13,13 +13,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { OrbitingCirclesDemo } from "@/components/Technology";
+import { Separator } from "@radix-ui/react-separator";
 
 export default function Home() {
 
   return ( 
     <div className="relative h-auto w-auto">
       <BlurFade delay={0.3} inView>
-        <main className="items-start mt-12 justify-center h-screen flex relative">
+        <main className="items-start my-12 justify-center h-screen flex relative">
           <div className="flex items-center justify-center flex-col">
             {/*Hello Text */}
             <BlurFadeTextDemo >
@@ -34,18 +35,27 @@ export default function Home() {
               <OrbitingCirclesDemo />
             </div>
             
+
+            {/* About me */}
+            <div className="w-[40%] my-12">
+              <HoverBorderGradientDemo text={"About me"}/>
+              <About />
+            </div>
+
             {/*Education */}
-            <div>
+            <div className="my-12">
               <HoverBorderGradientDemo text={"Education"}/>
               <Education />
             </div>
 
-            {/* About me */}
-            <div className="flex relative flex-col items-center justify-start">
-              <div className="flex justify-start items-start w-[450px]">
-                <HoverBorderGradientDemo text={"About me"}/>
+            {/*Skills */}
+            <div className="w-full my-12 flex items-center justify-center flex-col ">
+              <div className="flex flex-col gap-4">
+                <HoverBorderGradientDemo text={"Skills"}/>
+                <div className="flex items-center justify-center">
+                  <Skills />
+                </div>
               </div>
-              <About />
             </div>
 
           </div>
@@ -77,9 +87,11 @@ function RotateText () {
 }
 
 function About () {
-  const words = `I am Full-Stack Developer. I use mainly Reactjs or Nextjs for frontend and Nodejs for Backend development`
+  const words = `I am Full-Stack Developer. I mainly use Reactjs or Nextjs for frontend and Nodejs for Backend development. I have built various projects that show case my skill. Browser and explore more.`
   return (
-    <TextGenerateEffect words={words} />
+    <div className="">
+      <TextGenerateEffect words={words} />
+    </div>
   )
 }
 
@@ -147,7 +159,136 @@ function Education () {
 
 function Skills () {
   return (
-    <div>
+    <div className="flex gap-4 w-full">
+
+      {/*Programming languages */}
+      <div className="">
+        <h1 className="font-Kanit my-2">Languages</h1>
+        <div className="flex flex-col gap-2 items-center">
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pluralsight.com%2Fpaths%2Fc-plus-plus&psig=AOvVaw2M1mVZaCS_1XBT2atL6OKE&ust=1723587327831000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICjsqW98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
+            <AvatarFallback>C++</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.java.com/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>C++</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.python.org/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>C++</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.typescriptlang.org/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>C++</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsimple.wikipedia.org%2Fwiki%2FJavaScript&psig=AOvVaw2_MIUHlL5DBp9EVXQJFdAY&ust=1723587462996000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDqk_K98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
+            <AvatarFallback className="bg-yellow-400 text-black">JS</AvatarFallback>
+          </Avatar>
+        </div>
+        <div>
+
+        </div>
+      </div>
+      <Separator />
+      {/*Frameworks*/}
+      <div>
+        <h1 className="font-Kanit my-2">Frameworks</h1>
+        <div className="flex flex-col items-center gap-2">
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://nextjs.org/favicon.ico" alt="@vercel" />
+            <AvatarFallback>Next.js</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://react.dev/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
+
+      <Separator />
+      {/**UI Tools*/}
+      <div>
+        <h1 className="font-Kanit my-2">UI Tools</h1>
+        <div className="flex flex-col justify-center gap-2">
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://ui.shadcn.com/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://ui.aceternity.com/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://magicui.design/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>CN</AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
+
+      <Separator />
+      {/*Backend */}
+      <div>
+        <h1 className="font-Kanit my-2">Backend</h1>
+        <div className="flex flex-col items-center gap-2">
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://nodejs.org/static/images/favicons/favicon.png" alt="@nodejs" />
+            <AvatarFallback>Node.js</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnDneBGnQL7E9hZDwztRO1GfQcCj1FqRrhBw&s" alt="@typescript" />
+            <AvatarFallback></AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
+
+      <Separator />
+      {/*Database */}
+      <div>
+        <h1 className="font-Kanit my-2">Database</h1>
+        <div className="flex flex-col items-center gap-2">   
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.mongodb.com/favicon.ico" alt="@mongodb" />
+            <AvatarFallback>MongoDB</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://firebase.google.com/favicon.ico" alt="@redis" />
+            <AvatarFallback>Firebase</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.postgresql.org/favicon.ico" alt="@postgresql" />
+            <AvatarFallback>PostgreSQL</AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
+
+      <Separator />
+      {/*Services */}
+      <div>
+        <h1 className="font-Kanit my-2">Services</h1>
+        <div className="flex flex-col items-center gap-2">
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://aws.amazon.com/favicon.ico" alt="@google" />
+            <AvatarFallback>AWS</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://vercel.com/favicon.ico" alt="@aws" />
+            <AvatarFallback>Vercel</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://cloudinary.com/favicon.ico" alt="@firebase" />
+            <AvatarFallback>Cloudinary</AvatarFallback>
+          </Avatar>
+          <Avatar>
+            <AvatarImage className="rounded-full" src="https://www.netlify.com/favicon.ico" alt="@firebase" />
+            <AvatarFallback>Cloudinary</AvatarFallback>
+          </Avatar>
+        </div>
+      </div>
 
     </div>
   )
@@ -169,3 +310,5 @@ function Certificates () {
     <div> </div>
   )
 }
+
+``
