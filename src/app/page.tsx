@@ -13,7 +13,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { OrbitingCirclesDemo } from "@/components/Technology";
-import { Separator } from "@radix-ui/react-separator";
+import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
 
@@ -49,13 +49,20 @@ export default function Home() {
             </div>
 
             {/*Skills */}
-            <div className="w-full my-12 flex items-center justify-center flex-col ">
-              <div className="flex flex-col gap-4">
-                <HoverBorderGradientDemo text={"Skills"}/>
+            <div className="w-full  items-center justify-center flex  flex-col h-[400px] relative">
+              <div className="flex flex-col gap-4 absolute top-0">
+                <div className="pl-14">
+                  <HoverBorderGradientDemo text={"Skills"}/>
+                </div>
                 <div className="flex items-center justify-center">
                   <Skills />
                 </div>
               </div>
+            </div>
+
+            {/*Projects */}
+            <div className="">
+              <div><HoverBorderGradientDemo text={"My Projects"}/></div>
             </div>
 
           </div>
@@ -126,7 +133,7 @@ function Education () {
             </Avatar> 
             <p className="flex items-start flex-col ">
               <span>Raman Munjal Vidya Mandir</span>
-              <span>Intermediate (Year:2021)</span>
+              <span>Intermediate Schooling (Year:2021)</span>
             </p>
           </div>
         </AccordionTrigger>
@@ -160,130 +167,127 @@ function Education () {
 function Skills () {
   return (
     <div className="flex gap-4 w-full">
-
       {/*Programming languages */}
       <div className="">
-        <h1 className="font-Kanit my-2">Languages</h1>
-        <div className="flex flex-col gap-2 items-center">
-          <Avatar>
+        <div className="flex flex-col items-center relative group">
+          <h1 className="font-Kanit my-2 text-lg text-violet-500">Languages</h1>
+          <Avatar className="absolute top-10 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pluralsight.com%2Fpaths%2Fc-plus-plus&psig=AOvVaw2M1mVZaCS_1XBT2atL6OKE&ust=1723587327831000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICjsqW98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
-            <AvatarFallback>C++</AvatarFallback>
+            <AvatarFallback className="">C++</AvatarFallback>
           </Avatar>
-          <Avatar>
-            <AvatarImage className="rounded-full" src="https://www.java.com/favicon.ico" alt="@shadcn" />
-            <AvatarFallback>C++</AvatarFallback>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
+            <AvatarImage className="rounded-full " src="https://www.java.com/favicon.ico" alt="@shadcn" />
+            <AvatarFallback>Java</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.python.org/favicon.ico" alt="@shadcn" />
-            <AvatarFallback>C++</AvatarFallback>
-          </Avatar>
-          <Avatar>
+            <AvatarFallback>PY</AvatarFallback>
+          </Avatar> 
+          <Avatar className="absolute top-32 group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.typescriptlang.org/favicon.ico" alt="@shadcn" />
-            <AvatarFallback>C++</AvatarFallback>
+            <AvatarFallback>TS</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-40 group-hover:translate-y-14 duration-300 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsimple.wikipedia.org%2Fwiki%2FJavaScript&psig=AOvVaw2_MIUHlL5DBp9EVXQJFdAY&ust=1723587462996000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDqk_K98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
             <AvatarFallback className="bg-yellow-400 text-black">JS</AvatarFallback>
           </Avatar>
         </div>
-        <div>
-
-        </div>
       </div>
-      <Separator />
+
+      <Separator orientation="vertical" />
       {/*Frameworks*/}
-      <div>
-        <h1 className="font-Kanit my-2">Frameworks</h1>
-        <div className="flex flex-col items-center gap-2">
-          <Avatar>
-            <AvatarImage className="rounded-full" src="https://nextjs.org/favicon.ico" alt="@vercel" />
-            <AvatarFallback>Next.js</AvatarFallback>
-          </Avatar>
-          <Avatar>
+      <div className="">
+        <div className="flex flex-col items-center relative group">
+        <h1 className="font-Kanit my-2 text-lg text-violet-500">Frameworks</h1>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://react.dev/favicon.ico" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
+          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
+            <AvatarImage className="rounded-full" src="https://nextjs.org/favicon.ico" alt="@vercel" />
+            <AvatarFallback>Next.js</AvatarFallback>
+          </Avatar>
         </div>
       </div>
 
-      <Separator />
+      <Separator orientation="vertical"  />
       {/**UI Tools*/}
       <div>
-        <h1 className="font-Kanit my-2">UI Tools</h1>
-        <div className="flex flex-col justify-center gap-2">
-          <Avatar>
+        <div className="flex flex-col items-center relative group">
+          <h1 className="font-Kanit my-2 text-lg text-violet-500">UI Tools</h1>
+          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSDKn3vA2YUbXzN0ZC3gALWJ08gJN-Drl15w&s" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://ui.shadcn.com/favicon.ico" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://ui.aceternity.com/favicon.ico" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-32 group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://magicui.design/favicon.ico" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
       </div>
 
-      <Separator />
+      <Separator orientation="vertical"  />
       {/*Backend */}
       <div>
-        <h1 className="font-Kanit my-2">Backend</h1>
-        <div className="flex flex-col items-center gap-2">
-          <Avatar>
+        <div className="flex flex-col items-center relative group">
+        <h1 className="font-Kanit my-2 text-violet-500">Backend</h1>
+          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://nodejs.org/static/images/favicons/favicon.png" alt="@nodejs" />
             <AvatarFallback>Node.js</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnDneBGnQL7E9hZDwztRO1GfQcCj1FqRrhBw&s" alt="@typescript" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
         </div>
       </div>
 
-      <Separator />
+      <Separator orientation="vertical"  />
       {/*Database */}
       <div>
-        <h1 className="font-Kanit my-2">Database</h1>
-        <div className="flex flex-col items-center gap-2">   
-          <Avatar>
+        <div className="flex flex-col items-center relative group">   
+        <h1 className="font-Kanit my-2 text-lg text-violet-500">Database</h1>
+          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.mongodb.com/favicon.ico" alt="@mongodb" />
             <AvatarFallback>MongoDB</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://firebase.google.com/favicon.ico" alt="@redis" />
             <AvatarFallback>Firebase</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.postgresql.org/favicon.ico" alt="@postgresql" />
             <AvatarFallback>PostgreSQL</AvatarFallback>
           </Avatar>
         </div>
       </div>
 
-      <Separator />
+      <Separator orientation="vertical"  />
       {/*Services */}
       <div>
-        <h1 className="font-Kanit my-2">Services</h1>
-        <div className="flex flex-col items-center gap-2">
-          <Avatar>
+        <div className="flex flex-col items-center group relative">
+        <h1 className="font-Kanit my-2 text-lg text-violet-500">Services</h1>
+          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://aws.amazon.com/favicon.ico" alt="@google" />
             <AvatarFallback>AWS</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://vercel.com/favicon.ico" alt="@aws" />
             <AvatarFallback>Vercel</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-24 group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://cloudinary.com/favicon.ico" alt="@firebase" />
             <AvatarFallback>Cloudinary</AvatarFallback>
           </Avatar>
-          <Avatar>
+          <Avatar className="absolute top-32 group-hover:translate-y-16 duration-300 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.netlify.com/favicon.ico" alt="@firebase" />
             <AvatarFallback>Cloudinary</AvatarFallback>
           </Avatar>
