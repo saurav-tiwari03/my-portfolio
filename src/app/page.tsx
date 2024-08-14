@@ -23,9 +23,11 @@ export default function Home() {
         <main className="items-start my-12 justify-center h-screen flex relative">
           <div className="flex items-center justify-center flex-col">
             {/*Hello Text */}
-            <BlurFadeTextDemo >
+            <div id='#'>
+              <BlurFadeTextDemo >
+              </BlurFadeTextDemo>
+            </div>
               
-            </BlurFadeTextDemo>
 
             {/*Developer Text */}
             <RotateText />
@@ -171,12 +173,12 @@ function Skills () {
       <div className="">
         <div className="flex flex-col items-center relative group">
           <h1 className="font-Kanit my-2 text-lg text-violet-500">Languages</h1>
-          <Avatar className="absolute top-10 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pluralsight.com%2Fpaths%2Fc-plus-plus&psig=AOvVaw2M1mVZaCS_1XBT2atL6OKE&ust=1723587327831000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCICjsqW98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
+          <Avatar className="absolute top-10 group-hover:translate-y-3 duration-100 hover:scale-125 hover:z-50">
+            <AvatarImage className="rounded-full" src="/skills/c++.png" alt="@shadcn" />
             <AvatarFallback className="">C++</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full " src="https://www.java.com/favicon.ico" alt="@shadcn" />
+            <AvatarImage className="rounded-full " src="/skills/java.png" alt="@shadcn" />
             <AvatarFallback>Java</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
@@ -188,7 +190,7 @@ function Skills () {
             <AvatarFallback>TS</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-40 group-hover:translate-y-14 duration-300 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsimple.wikipedia.org%2Fwiki%2FJavaScript&psig=AOvVaw2_MIUHlL5DBp9EVXQJFdAY&ust=1723587462996000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPDqk_K98IcDFQAAAAAdAAAAABAE" alt="@shadcn" />
+            <AvatarImage className="rounded-full" src="/skills/js.png" alt="@shadcn" />
             <AvatarFallback className="bg-yellow-400 text-black">JS</AvatarFallback>
           </Avatar>
         </div>
@@ -224,11 +226,11 @@ function Skills () {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://ui.aceternity.com/favicon.ico" alt="@shadcn" />
+            <AvatarImage className="rounded-full" src="/skills/aceternity.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-32 group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://magicui.design/favicon.ico" alt="@shadcn" />
+            <AvatarImage className="rounded-full" src="/skills/magicui.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
         </div>
@@ -244,7 +246,7 @@ function Skills () {
             <AvatarFallback>Node.js</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnDneBGnQL7E9hZDwztRO1GfQcCj1FqRrhBw&s" alt="@typescript" />
+            <AvatarImage className="rounded-full" src="/skills/express.png" alt="@typescript" />
             <AvatarFallback></AvatarFallback>
           </Avatar>
         </div>
@@ -264,7 +266,7 @@ function Skills () {
             <AvatarFallback>Firebase</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://www.postgresql.org/favicon.ico" alt="@postgresql" />
+            <AvatarImage className="rounded-full" src="/skills/postgress.png" alt="@postgresql" />
             <AvatarFallback>PostgreSQL</AvatarFallback>
           </Avatar>
         </div>
@@ -276,7 +278,7 @@ function Skills () {
         <div className="flex flex-col items-center group relative">
         <h1 className="font-Kanit my-2 text-lg text-violet-500">Services</h1>
           <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
-            <AvatarImage className="rounded-full" src="https://aws.amazon.com/favicon.ico" alt="@google" />
+            <AvatarImage className="rounded-full" src="/skills/aws.png" alt="@google" />
             <AvatarFallback>AWS</AvatarFallback>
           </Avatar>
           <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
