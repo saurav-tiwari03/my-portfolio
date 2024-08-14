@@ -3,6 +3,7 @@ const nextConfig = {
   images: {
     domains: [
       "api.microlink.io", 
+      'avatar.vercel.sh',
     ],
   },
 };

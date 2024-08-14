@@ -67,6 +67,10 @@ export default function Home() {
               <div><HoverBorderGradientDemo text={"My Projects"}/></div>
             </div>
 
+            {/*Blogs */}
+            <div className="w-[40%]">
+            </div>
+
           </div>
         </main>
       </BlurFade >
@@ -169,27 +173,28 @@ function Education () {
 function Skills () {
   return (
     <div className="flex gap-4 w-full">
+
       {/*Programming languages */}
       <div className="">
         <div className="flex flex-col items-center relative group">
           <h1 className="font-Kanit my-2 text-lg text-violet-500">Languages</h1>
-          <Avatar className="absolute top-10 group-hover:translate-y-3 duration-100 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-[40px] group-hover:translate-y-0 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="/skills/c++.png" alt="@shadcn" />
             <AvatarFallback className="">C++</AvatarFallback>
           </Avatar>
-          <Avatar className="absolute top-16 group-hover:translate-y-8 duration-150 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-[56px] group-hover:translate-y-6 duration-150 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full " src="/skills/java.png" alt="@shadcn" />
             <AvatarFallback>Java</AvatarFallback>
           </Avatar>
-          <Avatar className="absolute top-24 group-hover:translate-y-10 duration-200 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-[72px] group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.python.org/favicon.ico" alt="@shadcn" />
             <AvatarFallback>PY</AvatarFallback>
           </Avatar> 
-          <Avatar className="absolute top-32 group-hover:translate-y-12 duration-200 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-[98px] group-hover:translate-y-[66px] duration-200 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="https://www.typescriptlang.org/favicon.ico" alt="@shadcn" />
             <AvatarFallback>TS</AvatarFallback>
           </Avatar>
-          <Avatar className="absolute top-40 group-hover:translate-y-14 duration-300 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-[114px] group-hover:translate-y-24 duration-300 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="/skills/js.png" alt="@shadcn" />
             <AvatarFallback className="bg-yellow-400 text-black">JS</AvatarFallback>
           </Avatar>
@@ -277,7 +282,7 @@ function Skills () {
       <div>
         <div className="flex flex-col items-center group relative">
         <h1 className="font-Kanit my-2 text-lg text-violet-500">Services</h1>
-          <Avatar className="absolute top-9 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
+          <Avatar className="absolute top-10 group-hover:translate-y-4 duration-100 hover:scale-125 hover:z-50">
             <AvatarImage className="rounded-full" src="/skills/aws.png" alt="@google" />
             <AvatarFallback>AWS</AvatarFallback>
           </Avatar>
