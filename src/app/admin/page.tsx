@@ -4,8 +4,6 @@ import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
   IconArrowLeft,
   IconBrandTabler,
-  IconSettings,
-  IconUserBolt,
 } from "@tabler/icons-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -17,7 +15,7 @@ import { RiAdminFill } from "react-icons/ri";
 
 
 
-export default function SidebarDemo() {
+export default function Admin() {
   const links = [
     {
       label: "Dashboard",
