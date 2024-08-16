@@ -61,7 +61,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 1rem;
+  width: 8px;
 }
 ::-webkit-scrollbar-track {
   background: #09090b;
