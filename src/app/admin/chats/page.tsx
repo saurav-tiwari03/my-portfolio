@@ -17,7 +17,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 
 
 
-export default function Admin() {
+export default function Blogs() {
   const links = [
     {
       label: "Dashboard",
@@ -139,7 +139,7 @@ const Dashboard = () => {
 function RightContent () {
   return (
     <div>
-      Admin Content
+      <p>Chats Dashboard</p>
     </div>
   )
 }
