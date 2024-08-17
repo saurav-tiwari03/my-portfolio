@@ -104,7 +104,7 @@ export default function Admin() {
     </Link>
   );
 };
- const LogoIcon = () => {
+const LogoIcon = () => { 
   return (
     <Link
       href="#"
