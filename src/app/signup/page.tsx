@@ -10,7 +10,7 @@ import {
 import Link from "next/link";
 import { ModeToggle } from "@/components/ThemeChanger";
 
-export default function Login() {
+export default function Signup() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -22,7 +22,7 @@ export default function Login() {
         Welcome to Saurav.tsx
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300 mb-4">
-        Login to Chat with me, comment and like my blogs
+        Signup to Chat with me, comment and like my blogs
       </p>
 
       <form className="" onSubmit={handleSubmit}>
@@ -76,11 +76,11 @@ export default function Login() {
             </span>
             <BottomGradient />
           </button>
-        </div>
-        <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-4 h-[1px] w-full" />
-        <div className="flex items-center justify-between">
-          <Link className="hover:underline" href='/signup'>Signup</Link>
-          <ModeToggle />  
+          <div className="bg-gradient-to-r from-transparent via-neutral-300 dark:via-neutral-700 to-transparent my-8 h-[1px] w-full" />
+          <div className="flex items-center justify-between">
+            <Link className="hover:underline" href='/login'>Login</Link>
+            <ModeToggle />  
+          </div>
         </div>
       </form>
     </div>

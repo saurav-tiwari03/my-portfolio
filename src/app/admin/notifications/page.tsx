@@ -141,5 +141,5 @@ function RightContent () {
     <div>
       <p>Notification Center</p>
     </div>
-  )
+  ) 
 }

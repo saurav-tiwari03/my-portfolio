@@ -28,8 +28,6 @@ export function ModeToggle() {
           ) : (
             <Moon />
           )
-
-  
         }
       </button>
     </div>

@@ -19,7 +19,7 @@ export default function Home() {
 
   return ( 
     <div className="relative h-auto w-auto">
-      <BlurFade delay={0.3} inView>
+      <BlurFade delay={0.3} >
         <main className="items-start my-12 justify-center h-screen flex relative">
           <div className="flex items-center justify-center flex-col">
             {/*Hello Text */}
@@ -81,7 +81,7 @@ export default function Home() {
 
 
 
-function Dock() {
+export function  Dock() {
   return (
     <div className= "fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50"  id='navbar'>
       <MyDock />

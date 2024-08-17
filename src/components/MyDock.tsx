@@ -30,7 +30,7 @@ export function MyDock() {
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger>
-                <a href='#'>
+                <a href='/#'>
                   <GoHome className="text-3xl hover:text-4xl duration-200"/>
                 </a>
               </TooltipTrigger>
