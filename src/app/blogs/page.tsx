@@ -4,6 +4,11 @@ import BlurFade from '@/components/magicui/blur-fade';
 import { Input } from '@/components/ui/input';
 import { IoSearch } from "react-icons/io5";
 import { Separator } from '@/components/ui/separator';
+import { Metadata } from 'next';
+
+export const metadata : Metadata ={
+  title:"Blogs.Saurav.tsx"
+}
 
 
 export default function page() {
