@@ -1,8 +1,8 @@
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  const cookieValue = request.cookies.get('access')?.value;
+  const cookieValue = request.cookies.get('user')?.value;
   const currentUrl = new URL(request.url);
 
   if (cookieValue === 'true' && currentUrl.pathname !== '/admin/dashboard') {
