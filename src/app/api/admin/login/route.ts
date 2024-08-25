@@ -8,9 +8,7 @@ export async function POST(req: NextRequest) {
     if (!email || !password) {
       return NextResponse.json({ message: "Please provide email and password" }, { status: 400 });
     }
-    
-    console.log('Successfully received request');
-
+    if(email == process.env.EMAIL && password == process.env.PASS){
       const res = NextResponse.json({ message: "Login to access Admin Panel", data: { email, password } });
       res.cookies.set("user", "true", {
         httpOnly: true,
@@ -18,6 +16,9 @@ export async function POST(req: NextRequest) {
         path: "/",
       });
       return res;
+    } else {
+      throw new Error('Invalid Password or Email')
+    }
     
   } catch (error) {
     console.error('Error during login:', error);
