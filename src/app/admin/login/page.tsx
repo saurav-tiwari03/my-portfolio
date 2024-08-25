@@ -21,7 +21,7 @@ export default function Page() {
     setLoader(true);
     try {
       console.log('Entering in TRY')
-      const response = await axios.post(`http://localhost:3000/api/admin/login`,{email,password})
+      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/admin/login`,{email,password})
       console.log(response)
       router.push('/admin');
     } catch (error:any) {
