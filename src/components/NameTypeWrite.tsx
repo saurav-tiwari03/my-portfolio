@@ -5,13 +5,13 @@ import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
   const [words, setWords] = useState([
     { text: "Hi," },
-    { text: "Saurav Tiwari", className: "text-violet-500 dark:text-violet-500" }
+    { text: "Saurav Tiwari", className: "text-violet-500 dark:text-violet-500 text-2xl" }
   ]);
 
   useEffect(() => {
     setWords([
       { text: "Hi," },
-      { text: "Saurav Tiwari 🥱", className: "text-violet-500 dark:text-violet-500" }
+      { text: "Saurav Tiwari 🥱", className: "text-violet-500 dark:text-violet-500 text-2xl" }
     ]);
   }, []);
 

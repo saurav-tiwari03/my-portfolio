@@ -5,7 +5,7 @@ export function BlurFadeTextDemo() {
   return (
     <section id="header" className="text-center gap-2 flex flex-col">
       <BlurFade delay={0.25} inView>
-        <h2 className="text-5xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none font-WorkSans " >
+        <h2 className="text-2xl md:text-5xl font-bold tracking-tighter font-WorkSans " >
           <TypewriterEffectSmoothDemo/>
         </h2>
       </BlurFade>

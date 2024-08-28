@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/accordion"
 import { OrbitingCirclesDemo } from "@/components/Technology";
 import { Separator } from "@/components/ui/separator";
+import ThreeDCardDemo from "@/components/Card";
 
 export default function Home() {
 
@@ -65,6 +66,9 @@ export default function Home() {
             {/*Projects */}
             <div className="">
               <div><HoverBorderGradientDemo text={"My Projects"}/></div>
+              <div>
+                <Projects />
+              </div>
             </div>
 
             {/*Blogs */}
@@ -306,11 +310,46 @@ function Skills () {
 }
 
 function Projects () {
+  type Props = {
+    title:string;
+    description: string;
+    imageUrl?:string;
+    href:string;
+    path:string;
+  } 
+  const data1:Props = {
+    title:"Track it",
+    description: "Track it is a platform that helps businesses and individuals manage their finances more effectively. It's built using React, Next.js, and TypeScript.",
+    imageUrl: "/projects/trackit.png",
+    href: "https://trackit-psi.vercel.app/",
+    path: "/projects/trackit"
+  }
+  const data2:Props = {
+    title:"Recipe Keeper",
+    description: "A delightful web application where you can collect and organize all your favorite recipes. It's built using React, Next.js, and TypeScript.",
+    imageUrl: "/projects/recipe-keeper.png",
+    href: "https://recipekkeeper.netlify.app/",
+    path: "/projects/recipe-keeper"
+  }
   return (
     <div>
-      <div>
-        <h1>Check out my latest work</h1>
-        <h2>I&appos;ve worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</h2>
+      <div className=" w-full">
+        <h1 className="text-3xl font-Kanit font-semibold">Check out my latest work</h1>
+        <h2 className="flex flex-wrap">I&apos;ve worked on a variety of projects, from simple websites to complex web applications. Here are a few of my favorites.</h2>
+      </div>
+      <div className="grid grid-cols-1 p-0 md:grid-cols-2">
+        <div className="">
+          <ThreeDCardDemo {...data1} />
+        </div>
+        <div className="">
+          <ThreeDCardDemo {...data2} />
+        </div>
+        <div>
+          <ThreeDCardDemo {...data2} />
+        </div>
+        <div>
+          <ThreeDCardDemo {...data1} />
+        </div>
       </div>
     </div>
   )

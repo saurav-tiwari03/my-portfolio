@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { lazy, useState } from "react";
 import { Sidebar, SidebarBody, SidebarLink } from "@/components/ui/sidebar";
 import {
   IconArrowLeft,
@@ -13,6 +13,8 @@ import { GiNotebook } from "react-icons/gi";
 import { MdChat } from "react-icons/md";
 import { RiAdminFill } from "react-icons/ri";
 import { IoMdNotificationsOutline } from "react-icons/io";
+import { GrProjects } from "react-icons/gr";
+
 
 
 
@@ -38,6 +40,13 @@ export default function Admin() {
       href: "/admin/chats",
       icon: (
         <MdChat className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
+      ),
+    },
+    { 
+      label: "Projects",
+      href: "/admin/projects",
+      icon: (
+        <GrProjects className="text-neutral-700 dark:text-neutral-200 h-5 w-5 flex-shrink-0" />
       ),
     },
     {
