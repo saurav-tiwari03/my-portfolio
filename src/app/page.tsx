@@ -15,20 +15,34 @@ import {
 import { OrbitingCirclesDemo } from "@/components/Technology";
 import { Separator } from "@/components/ui/separator";
 import ThreeDCardDemo from "@/components/Card";
+import NumberTicker from "@/components/magicui/number-ticker";
+import { useEffect, useState } from "react";
+
 
 export default function Home() {
+  const [loading,setLoading] = useState(true);
+  useEffect(() => {
+    const handleLoading = async () => {
+      await new Promise((resolve) => setTimeout(resolve, 2000)); 
+      setLoading(false); 
+    };
 
-  return ( 
+    handleLoading();
+  }, []);
+
+  if (loading) {
+    return <LoadingScreen />; 
+  }
+
+  return (
     <div className="relative h-auto w-auto">
-      <BlurFade delay={0.3} >
+      <BlurFade delay={0.3}>
         <main className="items-start my-12 justify-center h-screen flex relative">
           <div className="flex items-center justify-center flex-col">
             {/*Hello Text */}
-            <div id='#'>
-              <BlurFadeTextDemo >
-              </BlurFadeTextDemo>
+            <div id="#">
+              <BlurFadeTextDemo />
             </div>
-              
 
             {/*Developer Text */}
             <RotateText />
@@ -37,25 +51,24 @@ export default function Home() {
             <div className="flex w-full justify-center my-12">
               <OrbitingCirclesDemo />
             </div>
-            
 
             {/* About me */}
             <div className="w-[40%] my-12">
-              <HoverBorderGradientDemo text={"About me"}/>
+              <HoverBorderGradientDemo text={"About me"} />
               <About />
             </div>
 
             {/*Education */}
             <div className="my-12">
-              <HoverBorderGradientDemo text={"Education"}/>
+              <HoverBorderGradientDemo text={"Education"} />
               <Education />
             </div>
 
             {/*Skills */}
-            <div className="w-full  items-center justify-center flex  flex-col h-[400px] relative">
+            <div className="w-full items-center justify-center flex flex-col h-[400px] relative">
               <div className="flex flex-col gap-4 absolute top-0">
                 <div className="pl-14">
-                  <HoverBorderGradientDemo text={"Skills"}/>
+                  <HoverBorderGradientDemo text={"Skills"} />
                 </div>
                 <div className="flex items-center justify-center">
                   <Skills />
@@ -65,19 +78,19 @@ export default function Home() {
 
             {/*Projects */}
             <div className="">
-              <div><HoverBorderGradientDemo text={"My Projects"}/></div>
+              <div>
+                <HoverBorderGradientDemo text={"My Projects"} />
+              </div>
               <div>
                 <Projects />
               </div>
             </div>
 
             {/*Blogs */}
-            <div className="w-[40%]">
-            </div>
-
+            <div className="w-[40%]"></div>
           </div>
         </main>
-      </BlurFade >
+      </BlurFade>
       <Dock />
     </div>
   );
@@ -85,13 +98,25 @@ export default function Home() {
 
 
 
-export function  Dock() {
+export function Dock() {
   return (
     <div className= "fixed bottom-12 left-1/2 transform -translate-x-1/2 z-50"  id='navbar'>
       <MyDock />
     </div>
   );
 }
+
+export const LoadingScreen = () => {
+  return (
+  <div className="flex items-center justify-center h-screen">
+    <p className="whitespace-pre-wrap text-8xl font-medium tracking-tighter text-black dark:text-white">
+      <NumberTicker value={100} />
+    </p>
+  </div>
+  );
+};
+
+
 
 function RotateText () {
   return (
