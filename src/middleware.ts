@@ -23,6 +23,8 @@ export function middleware(request: NextRequest) {
     const decodedToken:any = jwt.decode(token);
 
     if (decodedToken?.email === ADMIN_EMAIL) {
+      if(request.nextUrl.pathname === '/admin')
+          return NextResponse.redirect(new URL('/admin/dashboard',request.url));
       return NextResponse.next();
     } else {
       return NextResponse.redirect(new URL('/admin/login', request.url));
