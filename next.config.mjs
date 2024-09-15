@@ -4,6 +4,8 @@ const nextConfig = {
     domains: [
       "api.microlink.io", 
       'avatar.vercel.sh',
+      'x.com',
+      'res.cloudinary.com'
     ],
   },
 };

@@ -20,10 +20,9 @@ export default function Page() {
     e.preventDefault();
     setLoader(true);
     try {
-      console.log('Entering in TRY')
       const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/admin/login`,{email,password})
       console.log(response)
-      router.push('/admin');
+      router.push('/admin/dashboard');
     } catch (error:any) {
       console.error('Error during login:', error.response.data);
       setLoader(false);

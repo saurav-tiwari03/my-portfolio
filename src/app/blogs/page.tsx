@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input';
 import { IoSearch } from "react-icons/io5";
 import { Separator } from '@/components/ui/separator';
 import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata : Metadata ={
   title:"Blogs.Saurav.tsx"
@@ -28,8 +29,21 @@ export default function page() {
         <div className='flex justify-center items-center'>
           <p className='h-[2px] w-[60%] bg-[#27272a]'></p>
         </div>
+        <Blog />
       </BlurFade>
+
       <Dock />
     </div>
+  )
+}
+
+function Blog () {
+  return (
+    <>
+      <div>
+        This is blog page
+        <Image src="https://res.cloudinary.com/dtrszmvgn/image/upload/v1726361982/Blog%20uploads/GUkHGyZXUAADbRp_cu3upv.png" alt='' width={100} height={100}/>
+      </div>
+    </>
   )
 }

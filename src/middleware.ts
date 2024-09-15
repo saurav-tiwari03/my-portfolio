@@ -1,24 +1,36 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 import { cookies } from 'next/headers';
+import jwt from 'jsonwebtoken'; 
+
+const ADMIN_EMAIL = process.env.NEXT_PUBLIC_ADMIN_EMAIL;
+
 
 export function middleware(request: NextRequest) {
-  // const cookieData = cookies().get('token'); // cookies is not a function
-  
-  // if (!cookieData) {
-  //   console.log('Cookie data not found');  
-  //   return NextResponse.redirect(new URL('/admin/login', request.url));
-  // }
+  console.log('Hello from middleware');
 
-  // const tokenValue = cookieData.value;
-  // console.log('Token :', tokenValue);
+  const cookieStore = cookies();
+  const token = cookieStore.get('token')?.value;
 
-  // if (tokenValue === process.env.USER_OTP && request.nextUrl.pathname === '/admin/login') {
-  //   return NextResponse.redirect(new URL('/admin/dashboard', request.url));
-  // }
-  console.log('Hello from middlwares')
+  if (!token) {
+    if (request.nextUrl.pathname === '/admin/login') {
+      return NextResponse.next(); 
+    }
+    return NextResponse.redirect(new URL('/admin/login', request.url));
+  }
 
-  return NextResponse.next();
+  try {
+    const decodedToken:any = jwt.decode(token);
+
+    if (decodedToken?.email === ADMIN_EMAIL) {
+      return NextResponse.next();
+    } else {
+      return NextResponse.redirect(new URL('/admin/login', request.url));
+    }
+  } catch (error) {
+    console.error('Token decoding failed:', error);
+    return NextResponse.redirect(new URL('/admin/login', request.url));
+  }
 }
 
 export const config = {
