@@ -38,7 +38,7 @@ export default function BlogPage() {
 function Blog () {
   return (
     <>
-      <Link href={`/blogs/otp`} className='flex p-4'>
+      <Link href={`/blogs/8822`} className='flex p-4'>
         <div className='dark:bg-[#1c1c1c] bg-[#f1f1f1] p-4 w-[350px] mt-4 rounded-lg'>
           <Image src="https://res.cloudinary.com/dtrszmvgn/image/upload/v1726361982/Blog%20uploads/GUkHGyZXUAADbRp_cu3upv.png" alt='' width={350} height={250}/>
           <h1 className='text-3xl font-Kanit my-4  hover:text-[#8b5cf6] duration-300'>OTP verification</h1>
